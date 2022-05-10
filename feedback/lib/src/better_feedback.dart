@@ -180,7 +180,7 @@ class BetterFeedback extends StatefulWidget {
 }
 
 class _BetterFeedbackState extends State<BetterFeedback> {
-  FeedbackController controller = FeedbackController();
+  late FeedbackController controller = FeedbackController();
 
   @override
   void initState() {

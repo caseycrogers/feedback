@@ -1,4 +1,5 @@
 import 'package:feedback/src/better_feedback.dart';
+import 'package:feedback/src/theme/feedback_theme.dart';
 import 'package:flutter/material.dart';
 
 /// Controls the state of the feeback ui.
@@ -10,6 +11,12 @@ class FeedbackController extends ChangeNotifier {
 
   /// This function is called when the user submits his feedback.
   OnFeedbackCallback? onFeedback;
+
+  /// A controller for the bottom feedback sheet.
+  ///
+  /// Only valid if the sheet is currently visible and is draggable.
+  final DraggableScrollableController sheetController =
+      DraggableScrollableController();
 
   /// Open the feedback ui.
   /// After the user submitted his feedback [onFeedback] is called.

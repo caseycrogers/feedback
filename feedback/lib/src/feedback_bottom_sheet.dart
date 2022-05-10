@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs
 
+import 'package:feedback/feedback.dart';
 import 'package:feedback/src/better_feedback.dart';
 import 'package:feedback/src/theme/feedback_theme.dart';
 import 'package:feedback/src/utilities/back_button_interceptor.dart';
@@ -103,6 +104,7 @@ class _DraggableFeedbackSheetState extends State<_DraggableFeedbackSheet> {
         ),
         Expanded(
           child: DraggableScrollableSheet(
+            controller: BetterFeedback.of(context).sheetController,
             snap: true,
             minChildSize: collapsedHeight,
             initialChildSize: collapsedHeight,
